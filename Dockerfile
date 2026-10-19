@@ -1,8 +1,8 @@
 FROM node:24-bookworm-slim AS build
 WORKDIR /app
-COPY apps/admin/package*.json ./
+COPY package*.json ./
 RUN npm ci
-COPY apps/admin/ .
+COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1 NEXT_PUBLIC_DEPLOYED=true
 RUN npm run build
 FROM node:24-bookworm-slim

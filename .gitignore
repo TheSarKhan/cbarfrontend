@@ -19,3 +19,5 @@ __pycache__/
 *.keystore
 artifacts/*.tar.gz
 artifacts/*.idsig
+
+*.tsbuildinfo
